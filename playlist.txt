@@ -1,3 +1,2 @@
-playlist1
 playlist2
 playlist3

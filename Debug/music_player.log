@@ -1,61 +1,66 @@
 ﻿  music_player.c
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(65,14): warning C4477: 'fscanf' : format string '%s' requires an argument of type 'char *', but variadic argument 3 has type 'int (*)[30]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(66,10): warning C4477: 'printf' : format string '%20s' requires an argument of type 'char *', but variadic argument 3 has type 'int *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(56,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(83,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(129,10): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 4 has type 'int *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(137,8): warning C4477: 'scanf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'char **'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(139,22): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(139,22): warning C4024: 'strcpy': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(139,31): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(139,31): warning C4024: 'strcpy': different types for formal and actual parameter 2
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(140,17): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(140,17): warning C4024: 'strcat': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(142,21): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(142,21): warning C4024: 'fopen': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(152,13): warning C4098: 'add_playlist': 'void' function returning a value
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(157,22): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(157,22): warning C4024: 'fputs': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(163,11): warning C4098: 'add_playlist': 'void' function returning a value
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(231,30): warning C4047: '=': 'char' differs in levels of indirection from 'void *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(265,8): warning C4477: 'scanf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'char **'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(267,22): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(267,22): warning C4024: 'strcpy': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(267,32): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(267,32): warning C4024: 'strcpy': different types for formal and actual parameter 2
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(268,17): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(268,17): warning C4024: 'strcat': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(272,21): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(272,21): warning C4024: 'fopen': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(276,12): warning C4098: 'add_song': 'void' function returning a value
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(290,14): warning C4477: 'fscanf' : format string '%s' requires an argument of type 'char *', but variadic argument 3 has type 'int (*)[30]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(291,10): warning C4477: 'printf' : format string '%20s' requires an argument of type 'char *', but variadic argument 3 has type 'int *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(316,11): warning C4098: 'add_song': 'void' function returning a value
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(282,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(331,8): warning C4477: 'scanf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'char **'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(333,22): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(333,22): warning C4024: 'strcpy': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(333,32): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(333,32): warning C4024: 'strcpy': different types for formal and actual parameter 2
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(334,17): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(334,17): warning C4024: 'strcat': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(338,21): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(338,21): warning C4024: 'fopen': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(366,21): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(366,21): warning C4024: 'fopen': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(410,29): warning C4047: '=': 'char' differs in levels of indirection from 'void *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(411,30): warning C4047: '=': 'char' differs in levels of indirection from 'void *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(348,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(373,9): warning C4101: 'j': unreferenced local variable
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(447,8): warning C4477: 'scanf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'char **'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(449,22): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(449,22): warning C4024: 'strcpy': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(449,32): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(449,32): warning C4024: 'strcpy': different types for formal and actual parameter 2
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(450,17): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(450,17): warning C4024: 'strcat': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(454,21): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(454,21): warning C4024: 'fopen': different types for formal and actual parameter 1
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(495,12): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 4 has type 'int *'
-C:\Users\gildo\source\repos\music_player\music_player\music_player.c(464,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(66,14): warning C4477: 'fscanf' : format string '%s' requires an argument of type 'char *', but variadic argument 3 has type 'int (*)[30]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(67,10): warning C4477: 'printf' : format string '%20s' requires an argument of type 'char *', but variadic argument 3 has type 'int *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(57,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(84,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(138,10): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 4 has type 'int *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(146,8): warning C4477: 'scanf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'char **'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(148,22): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(148,22): warning C4024: 'strcpy': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(148,31): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(148,31): warning C4024: 'strcpy': different types for formal and actual parameter 2
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(149,17): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(149,17): warning C4024: 'strcat': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(151,21): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(151,21): warning C4024: 'fopen': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(161,13): warning C4098: 'add_playlist': 'void' function returning a value
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(166,22): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(166,22): warning C4024: 'fputs': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(172,11): warning C4098: 'add_playlist': 'void' function returning a value
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(194,8): warning C4477: 'scanf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'char **'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(196,22): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(196,22): warning C4024: 'strcpy': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(196,32): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(196,32): warning C4024: 'strcpy': different types for formal and actual parameter 2
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(197,17): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(197,17): warning C4024: 'strcat': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(199,21): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(199,21): warning C4024: 'fopen': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(203,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(238,23): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(238,23): warning C4024: 'strcpy': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(274,30): warning C4047: '=': 'char' differs in levels of indirection from 'void *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(308,8): warning C4477: 'scanf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'char **'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(310,22): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(310,22): warning C4024: 'strcpy': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(310,32): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(310,32): warning C4024: 'strcpy': different types for formal and actual parameter 2
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(311,17): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(311,17): warning C4024: 'strcat': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(315,21): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(315,21): warning C4024: 'fopen': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(319,12): warning C4098: 'add_song': 'void' function returning a value
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(333,14): warning C4477: 'fscanf' : format string '%s' requires an argument of type 'char *', but variadic argument 3 has type 'int (*)[30]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(334,10): warning C4477: 'printf' : format string '%20s' requires an argument of type 'char *', but variadic argument 3 has type 'int *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(359,11): warning C4098: 'add_song': 'void' function returning a value
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(325,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(374,8): warning C4477: 'scanf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'char **'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(376,22): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(376,22): warning C4024: 'strcpy': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(376,32): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(376,32): warning C4024: 'strcpy': different types for formal and actual parameter 2
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(377,17): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(377,17): warning C4024: 'strcat': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(381,21): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(381,21): warning C4024: 'fopen': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(409,21): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[50]'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(409,21): warning C4024: 'fopen': different types for formal and actual parameter 1
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(453,29): warning C4047: '=': 'char' differs in levels of indirection from 'void *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(454,30): warning C4047: '=': 'char' differs in levels of indirection from 'void *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(391,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(416,9): warning C4101: 'j': unreferenced local variable
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(539,30): warning C4133: 'function': incompatible types - from 'int [30]' to 'const char *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(541,25): warning C4133: 'function': incompatible types - from 'int [30]' to 'char *const '
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(542,12): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 4 has type 'int *'
+C:\Users\gildo\source\repos\music_player\music_player\music_player.c(552,16): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 3 has type 'int *'
   music_player.vcxproj -> C:\Users\gildo\source\repos\music_player\Debug\music_player.exe

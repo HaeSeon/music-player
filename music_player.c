@@ -8,6 +8,7 @@
 #define LIST_NUM 10
 
 
+//Song 구조체
 typedef struct
 {
 	char title[30];
@@ -24,7 +25,7 @@ Song playlist[LIST_NUM];
 void intro();	//사용법 설명
 
 //플레이리스트 관련 함수
-void print_playlist(Song *ptr,int *num);	//플레이리스트 목록 출력
+void print_playlist(Song *ptr,int *num);	//플레이리스트 목록 출력 후 해당 플레이리스트 노래 재생
 void add_playlist(Song* ptr,int *num);	//플레이리스트 추가
 int delete_playlist(Song* ptr, int *num);	//플레이리스트 삭제
 
@@ -33,9 +34,9 @@ void song_list(Song* ptr, int* num);	//노래 리스트 알파벳순 출력
 void add_song(Song* ptr);	//플레이리스트에 노래 추가
 int delete_song(Song* ptr);	//플레이리스트의 노래 삭제
 
-//재생 함수
-int select_play(Song* ptr);	//사용자가 입력한 노래 검색 후 재생
-int entire_play(Song* ptr, int* num);	//리스트의 전체 노래를 재생
+//선택 재생 함수
+int select_play(Song* ptr,int* num);	//사용자가 입력한 노래 검색 후 재생
+
 
 
 
@@ -97,7 +98,7 @@ int main(void) {
 	//add_song(playlist_song, &number);
 	//delete_song(playlist_song);
 	print_playlist(playlist, &playlist_number);
-	select_play(playlist_song);
+	//select_play(song,&number);
 	//delete_playlist(playlist, &playlist_number);
 
 	
@@ -108,7 +109,15 @@ int main(void) {
 
 void intro() {
 	printf("Welcome to Music Play Console App");
-	//내용 추가하자
+	printf("1. Show playlist : -sp");
+	printf("2. Add playlist : -ap");
+	printf("3. Delete playlist : -dp");
+	printf("4. Show ordered total songlist -ss");
+	printf("5. Add song to playlist : -astp");
+	printf("6. Delete song from playlist : -dsfp");
+	printf("7. Select song and play : -ssp");
+	
+
 }
 
 void song_list(Song* ptr, int* num) {
@@ -179,6 +188,34 @@ void print_playlist(Song* ptr, int* num) {
 	for (int i = 0; i < *num; i++) {
 		printf("%s\n", ptr[i].title);
 	}
+
+	char* filename[50];
+	printf("Input playlist name you want to listen.\nname : ");
+	scanf("%s", filename);
+	char* playlist_name[50];
+	strcpy(playlist_name, filename);
+	strcat(filename, ".txt");
+	FILE* fr = NULL;
+	fr = fopen(filename, "r");
+
+	//전체노래 갯수 세기
+	int number = 0;
+	char c = NULL;
+	while ((c = fgetc(fr)) != EOF)
+		if (c == '\n') number++;
+	//printf("%d\n", number);
+
+
+
+	fseek(fr, 0, SEEK_SET);	//파일포인터 처음으로
+	for (int i = 0; i < number; i++) {
+		fscanf(fr, "%s %s\n", &song[i].title, &song[i].singer);
+		printf("%20s %20s\n", song[i].title, song[i].singer);
+
+		//printf("%s\n", user[i].phone2);
+	}
+
+	fclose(fr);
 }
 
 //플레이리스트를 삭제하는 함수
@@ -197,6 +234,12 @@ int delete_playlist(Song* ptr, int* num) {
 	if (*num > 0) {
 		printf("Input Name you want to delete. : ");
 		scanf("%s", name);
+		char* playlist_name[50];
+		strcpy(playlist_name, name);
+		strcat(name, ".txt");
+
+		int nResult = remove(name);
+
 
 		int searchIndex[40] = { 0 };
 		j = 0;
@@ -440,47 +483,27 @@ int delete_song(Song* ptr) {
 
 
 
-int select_play(Song* ptr) {
-
-	char* filename[50];
-	printf("Input playlist name you want to add song.\nname : ");
-	scanf("%s", filename);
-	char* playlist_name[50];
-	strcpy(playlist_name, filename);
-	strcat(filename, ".txt");
+int select_play(Song* ptr, int* num) {
 
 
-	FILE* fr = NULL;
-	fr = fopen(filename, "r");   //입력 스트림 형성
-	if (fr == NULL) {
+
+	FILE* fw = NULL;
+	fw = fopen("song_data.txt", "w");   //입력 스트림 형성
+	if (fw == NULL) {
 		fprintf(stderr, "can not read file.\n");
 
 		return -1;                //파일을 쓸 수 없을 때(-1의 반환은 비정상적 종료 의미)
 
 	}
 
-	//전체노래 갯수 세기
-	int song_num = 0;
-	char chh = NULL;
-	while ((chh = fgetc(fr)) != EOF)
-		if (chh == '\n') song_num++;
-	printf("%d\n", song_num);
 
 
-	fseek(fr, 0, SEEK_SET);	//파일포인터 처음으로
-	for (int i = 0; i < song_num; i++) {
-		fscanf(fr, "%s %s\n", &ptr[i].title, &ptr[i].singer);
-		printf("%20s %20s\n", ptr[i].title, ptr[i].singer);
-
-		//printf("%s\n", user[i].phone2);
-	}
-
-	fclose(fr);
+	
 	char name[30];
 	int i;
 
 	//저장된 데이터가 있다면
-	if (song_num > 0) {
+	if (*num > 0) {
 		printf("Input Name: ");
 		scanf("%s", name);
 
@@ -488,18 +511,26 @@ int select_play(Song* ptr) {
 
 		for (i = 0; i < MAX_NUM; i++) {
 			//strcmp는 문자열이 일치할때 0을 반환
-			//0은 C언어에서 거짓을 의미
-			//그러므로 ! 을 붙여 참으로 변경하여 실행
+
 			if (strcmp(name, ptr[i].title)==0 || strcmp(name, ptr[i].singer)==0) {
 
+				
+				int a = atoi(ptr[i].count);
+				a++;
+				sprintf(ptr[i].count, "%d", a);
 				printf("%d. %s %s %s\n", j + 1, ptr[i].title, ptr[i].singer, ptr[i].count);
-
 
 				j++;
 
 			}
 
+
 		}
+
+		for (i = 0; i < *num; i++) {
+			fprintf(fw, "%s %s %s\n", ptr[i].title, ptr[i].singer, ptr[i].count);
+		}
+		fclose(fw);
 		printf("Match Found \n\n");
 		return 0;
 		printf("Not Found \n\n");

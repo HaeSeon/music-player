@@ -1,4 +1,4 @@
-mine lauv 0
+mine lauv 1
 dishes lauv 0
 painkilller ruel 0
 nevernot lauv 0
